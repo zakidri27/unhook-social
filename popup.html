@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>Unhook Social</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Unhook Social</h1>
+      <p>تصفّح بنيّة واضحة، لا بخوارزمية.</p>
+    </div>
+    <label class="switch master">
+      <input type="checkbox" data-key="enabled" aria-label="تشغيل الإضافة">
+      <span class="track"></span>
+    </label>
+  </header>
+
+  <main id="panel">
+    <section data-group="fb">
+      <div class="head">
+        <h2>فيسبوك</h2>
+        <label class="all"><span>تفعيل الكل</span><span class="switch"><input type="checkbox" data-all="fb"><span class="track"></span></span></label>
+      </div>
+      <label class="row"><span>إخفاء الخلاصة الرئيسية</span><span class="switch"><input type="checkbox" data-key="fb_feed"><span class="track"></span></span></label>
+      <label class="row"><span>إخفاء القصص</span><span class="switch"><input type="checkbox" data-key="fb_stories"><span class="track"></span></span></label>
+      <label class="row"><span>إخفاء العمود الجانبي</span><span class="switch"><input type="checkbox" data-key="fb_sidebar"><span class="track"></span></span></label>
+      <label class="row"><span>حظر صفحة الريلز وWatch</span><span class="switch"><input type="checkbox" data-key="fb_reels"><span class="track"></span></span></label>
+      <label class="row"><span>الريل المُرسل فقط (منع التمرير للتالي)</span><span class="switch"><input type="checkbox" data-key="fb_reel_lock"><span class="track"></span></span></label>
+      <label class="row"><span>حظر الإعلانات</span><span class="switch"><input type="checkbox" data-key="fb_ads"><span class="track"></span></span></label>
+      <label class="row"><span>إخفاء التعليقات</span><span class="switch"><input type="checkbox" data-key="fb_comments"><span class="track"></span></span></label>
+      <label class="row"><span>إخفاء Marketplace والألعاب</span><span class="switch"><input type="checkbox" data-key="fb_marketplace"><span class="track"></span></span></label>
+    </section>
+
+    <section data-group="ig">
+      <div class="head">
+        <h2>انستغرام</h2>
+        <label class="all"><span>تفعيل الكل</span><span class="switch"><input type="checkbox" data-all="ig"><span class="track"></span></span></label>
+      </div>
+      <label class="row"><span>إخفاء خلاصة الصفحة الرئيسية</span><span class="switch"><input type="checkbox" data-key="ig_feed"><span class="track"></span></span></label>
+      <label class="row"><span>إخفاء القصص</span><span class="switch"><input type="checkbox" data-key="ig_stories"><span class="track"></span></span></label>
+      <label class="row"><span>حظر صفحة الريلز</span><span class="switch"><input type="checkbox" data-key="ig_reels"><span class="track"></span></span></label>
+      <label class="row"><span>الريل المُرسل فقط (منع التمرير للتالي)</span><span class="switch"><input type="checkbox" data-key="ig_reel_lock"><span class="track"></span></span></label>
+      <label class="row"><span>حظر الإعلانات</span><span class="switch"><input type="checkbox" data-key="ig_ads"><span class="track"></span></span></label>
+      <label class="row"><span>إخفاء التعليقات</span><span class="switch"><input type="checkbox" data-key="ig_comments"><span class="track"></span></span></label>
+      <label class="row"><span>حظر صفحة الاستكشاف</span><span class="switch"><input type="checkbox" data-key="ig_explore"><span class="track"></span></span></label>
+    </section>
+  </main>
+
+  <footer>أعد تحميل الصفحة إن لم يظهر التغيير فورًا.</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

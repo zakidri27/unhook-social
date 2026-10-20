@@ -1,0 +1,89 @@
+/* Unhook Social — all hiding is gated by tokens on <html data-uh="...">, set by content.js.
+   CSS is injected by the browser at document_start, so nothing flashes before it applies. */
+
+/* ================= Facebook ================= */
+
+/* Feed: group/page/profile feeds, and on the home page the whole main column */
+html[data-uh~="fb_feed"] div[role="feed"],
+html[data-uh~="fb_feed"] [data-pagelet^="FeedUnit"],
+html[data-uh~="fb_feed"][data-uh-home="1"] [role="main"],
+html[data-uh~="fb_feed"][data-uh-home="1"] [data-uh-f] { display: none !important; }
+
+/* Stories */
+html[data-uh~="fb_stories"] [data-pagelet="Stories"],
+html[data-uh~="fb_stories"] div[aria-label="Stories"],
+html[data-uh~="fb_stories"] div[aria-label="Stories tray"],
+html[data-uh~="fb_stories"] [data-uh-s] { display: none !important; }
+
+/* Right sidebar */
+html[data-uh~="fb_sidebar"] [role="complementary"] { display: none !important; }
+
+/* Reels / Watch entry points (a single shared reel link is NOT hidden) */
+html[data-uh~="fb_reels"] a[href*="/reel/?s=tab"],
+html[data-uh~="fb_reels"] a[href$="/reel/"],
+html[data-uh~="fb_reels"] a[href*="/watch/"],
+html[data-uh~="fb_reels"] a[href$="/watch"],
+html[data-uh~="fb_reels"] [data-pagelet="Reels"] { display: none !important; }
+
+/* Marketplace / Gaming shortcuts */
+html[data-uh~="fb_marketplace"] a[href*="/marketplace"],
+html[data-uh~="fb_marketplace"] a[href*="/gaming"] { display: none !important; }
+
+/* Ads */
+html[data-uh~="fb_ads"] [data-uh-ad] { display: none !important; }
+
+/* Comments: nested comment articles, the comment box, comment buttons, "view more" links */
+html[data-uh~="fb_comments"] [role="article"][aria-label^="Comment by"],
+html[data-uh~="fb_comments"] [role="article"][aria-label^="Reply by"],
+html[data-uh~="fb_comments"] [role="article"][aria-label^="تعليق من"],
+html[data-uh~="fb_comments"] [role="article"][aria-label^="رد من"],
+html[data-uh~="fb_comments"] [role="article"] form:has([role="textbox"]),
+html[data-uh~="fb_comments"] [aria-label^="Write a comment"],
+html[data-uh~="fb_comments"] [aria-label^="Write a reply"],
+html[data-uh~="fb_comments"] [aria-label^="اكتب تعليق"],
+html[data-uh~="fb_comments"] [aria-label^="اكتب رد"],
+html[data-uh~="fb_comments"] [aria-label="Leave a comment"],
+html[data-uh~="fb_comments"] [aria-label="Comment"][role="button"],
+html[data-uh~="fb_comments"] [aria-label="اترك تعليقًا"],
+html[data-uh~="fb_comments"] [aria-label="تعليق"][role="button"],
+html[data-uh~="fb_comments"] [data-uh-c] { display: none !important; }
+
+/* ================= Instagram ================= */
+
+html[data-uh~="ig_feed"][data-uh-home="1"] main article { display: none !important; }
+
+html[data-uh~="ig_stories"] [data-uh-s] { display: none !important; }
+
+html[data-uh~="ig_reels"] a[href="/reels/"],
+html[data-uh~="ig_reels"] a[href="/reels"] { display: none !important; }
+
+html[data-uh~="ig_explore"] a[href="/explore/"],
+html[data-uh~="ig_explore"] a[href="/explore"] { display: none !important; }
+
+html[data-uh~="ig_ads"] [data-uh-ad] { display: none !important; }
+
+/* Comments: composer + anything the structural scanner tagged */
+html[data-uh~="ig_comments"] article form:has(textarea),
+html[data-uh~="ig_comments"] main form:has(textarea),
+html[data-uh~="ig_comments"] div[role="dialog"] form:has(textarea),
+html[data-uh~="ig_comments"] [data-uh-c] { display: none !important; }
+
+/* ================= Reel lock (both sites) ================= */
+
+html[data-uh-lock="1"],
+html[data-uh-lock="1"] body { overflow: hidden !important; }
+
+html[data-uh-lock="1"] [aria-label*="next" i],
+html[data-uh-lock="1"] [aria-label*="previous" i],
+html[data-uh-lock="1"] [aria-label*="التالي"],
+html[data-uh-lock="1"] [aria-label*="السابق"] { display: none !important; }
+
+/* ================= Hidden-feed notice ================= */
+
+html[data-uh~="fb_feed"][data-uh-home="1"] body::after,
+html[data-uh~="ig_feed"][data-uh-home="1"] body::after {
+  content: "الخلاصة مخفية — Unhook Social";
+  position: fixed; inset: 45% 0 auto 0; text-align: center;
+  font: 600 16px/1.4 system-ui, "Segoe UI", Tahoma, sans-serif;
+  color: #8a8d91; pointer-events: none;
+}
