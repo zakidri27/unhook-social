@@ -9,6 +9,16 @@
 [![Version](https://img.shields.io/badge/version-1.2.0-orange)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+<br>
+
+<a href="https://github.com/zakidri27/unhook-social/releases/latest/download/unhook-social-v1.2.0.zip">
+  <img src="https://img.shields.io/badge/📥_تحميل_الإضافة_مجانًا-0078D4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="تحميل الإضافة">
+</a>
+
+<br>
+
+> **👇 حمّل الإضافة من الزر أعلاه، ثم اتبع خطوات التثبيت السهلة في الأسفل**
+
 </div>
 
 ---
@@ -56,20 +66,40 @@
 
 ---
 
-## 🚀 التثبيت
+## 🚀 التثبيت — خطوة بخطوة
 
 <div dir="rtl">
 
-### من الكود المصدري
+### 📥 الطريقة السهلة (لجميع المستخدمين)
 
-1. حمّل المستودع أو استنسخه:
-   ```
-   git clone https://github.com/zakidri27/unhook-social.git
-   ```
-2. افتح `chrome://extensions` في متصفح كروم
-3. فعّل **Developer mode** (المطوّر) من الزاوية العلوية اليمنى
-4. اضغط **Load unpacked** (تحميل مُفكّك) واختر مجلد `unhook-social`
-5. جاهز! 🎉
+**1. حمّل ملف الإضافة:**
+
+<a href="https://github.com/zakidri27/unhook-social/releases/latest/download/unhook-social-v1.2.0.zip">
+  <img src="https://img.shields.io/badge/📥_اضغط_لتحميل_الملف-0078D4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="تحميل">
+</a>
+
+**2. فك ضغط الملف** — ستجد مجلدًا اسمه `unhook-social`
+
+**3. افتح متصفح كروم** واكتب في شريط العنوان:
+```
+chrome://extensions
+```
+
+**4. فعّل زر Developer mode** (وضع المطوّر) — الزر الموجود في **الزاوية العلوية اليمنى**
+
+**5. اضغط زر "Load unpacked"** (تحميل مُفكّك) واختر مجلد `unhook-social` الذي فككته
+
+**6. جاهز! 🎉** — ستظهر الإضافة في شريط الإضافات
+
+---
+
+### 💻 للمطورين (من الكود المصدري)
+
+```
+git clone https://github.com/zakidri27/unhook-social.git
+```
+
+ثم اتبع الخطوات 3-6 أعلاه.
 
 </div>
 
